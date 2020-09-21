@@ -11,7 +11,7 @@ if __name__ == "__main__":
   parser.add_argument("path", help=" directory path to the raw data and and metadatafile ", type = str)
   parser.add_argument("-p", "--process_fastqs", help="genral processing of raw files", dest='process', action='store_true')
   parser.add_argument("-mk", "--make_kmer_distance_mat", help="making the kmer distance matrix for the samples", dest='kmer', action='store_true')
-  parser.add_argument("-lc", "--leiden_clustering", help="making the kmer distance matrix for the samples", dest='clusterit', action='store_true')
+  parser.add_argument("-lc", "--leiden_clustering", help="clustering reads based on the kmer space of samples", dest='clusterit', action='store_true')
   parser.add_argument("-cls", "--Collabse_clusters", help="Collabse the the tRNAs in clusters", dest='collabse', action='store_true')
   parser.add_argument("-th", "--Number_of_Threads", help="number of threads for MSA and collabse part (Default is 4)", dest='threads', type= int)
   parser.set_defaults(threads=4)
